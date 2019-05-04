@@ -1,0 +1,844 @@
+[ #27607 2019-04-30 ]
+mgr/test_orchestrator: Fix 'TestWriteCompletion' object has no attribute 'id' ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27607 
+
+[ #27613 2019-04-30 ]
+mgr/dashboard: RBD snapshot name suggestion with local time suffix ==> +2 -4 
+ https://github.com/ceph/ceph/pull/27613 
+
+[ #27880 2019-04-30 ]
+test/fio: fix a compiler error. ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27880 
+
+[ #27867 2019-04-29 ]
+ceph-object-corpus: pick up 15.0.0-539-g191ab33faf ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27867 
+
+[ #26643 2019-04-29 ]
+mimic: MDSMonitor: do not assign standby-replay when degraded ==> +3 -2 
+ https://github.com/ceph/ceph/pull/26643 
+
+[ #26804 2019-04-29 ]
+mimic: qa: unmount clients before deleting fs ==> +3 -0 
+ https://github.com/ceph/ceph/pull/26804 
+
+[ #26963 2019-04-29 ]
+mimic: qa: extend MDS heartbeat grace for valgrind ==> +5 -6 
+ https://github.com/ceph/ceph/pull/26963 
+
+[ #27861 2019-04-29 ]
+include/utime: do not cast sec to time_t ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27861 
+
+[ #27590 2019-04-29 ]
+messages: #include necessary header ==> +2 -0 
+ https://github.com/ceph/ceph/pull/27590 
+
+[ #27776 2019-04-29 ]
+install-deps.sh: add option to skip prebuilt boost-* pkgs installation ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27776 
+
+[ #27604 2019-04-29 ]
+mgr/dashboard: auth: fix user lastUpdate timestamp generation ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27604 
+
+[ #27766 2019-04-28 ]
+msg/async: no-need set connection for Message. ==> +0 -4 
+ https://github.com/ceph/ceph/pull/27766 
+
+[ #27767 2019-04-28 ]
+buffer, denc: more constness  ==> +6 -6 
+ https://github.com/ceph/ceph/pull/27767 
+
+[ #27757 2019-04-27 ]
+librbd: copyup read stats were incorrectly tied to child ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27757 
+
+[ #27821 2019-04-27 ]
+common/options: allow osd_pool_default_pg_autoscale_mode to update a runtime ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27821 
+
+[ #27823 2019-04-27 ]
+mon,msg/async: fix mon to mon authentication ==> +9 -5 
+ https://github.com/ceph/ceph/pull/27823 
+
+[ #18694 2019-04-27 ]
+mon/OSDMonitor.cc: Add current numbers of objects and bytes ==> +10 -3 
+ https://github.com/ceph/ceph/pull/18694 
+
+[ #22411 2019-04-27 ]
+common/WorkQueue: narrow ThreadPool::_lock in func worker ==> +10 -3 
+ https://github.com/ceph/ceph/pull/22411 
+
+[ #27209 2019-04-26 ]
+osd: Don't evict after a flush if intersecting scrub range ==> +5 -0 
+ https://github.com/ceph/ceph/pull/27209 
+
+[ #27786 2019-04-26 ]
+qa/suites/upgrade/*-x-singleton: enable bluestore debugging settings ==> +2 -0 
+ https://github.com/ceph/ceph/pull/27786 
+
+[ #27729 2019-04-26 ]
+osd: take heartbeat_lock when calling heartbeat() ==> +5 -1 
+ https://github.com/ceph/ceph/pull/27729 
+
+[ #27732 2019-04-26 ]
+common/assert: include ceph_abort_msg(arg) arg in log output ==> +4 -2 
+ https://github.com/ceph/ceph/pull/27732 
+
+[ #26176 2019-04-26 ]
+os/bluestore: do not check osd_max_object_size in _open_path() ==> +0 -7 
+ https://github.com/ceph/ceph/pull/26176 
+
+[ #27789 2019-04-26 ]
+os/bluestore: correctly measure deferred writes into new blobs ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27789 
+
+[ #27655 2019-04-26 ]
+common/options: annotate some options; enable some runtime updates ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27655 
+
+[ #27755 2019-04-26 ]
+librbd: leak on canceling simple io scheduler timer task ==> +7 -8 
+ https://github.com/ceph/ceph/pull/27755 
+
+[ #27456 2019-04-25 ]
+rgw: use the compatibilty function for pthread_setname ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27456 
+
+[ #27617 2019-04-25 ]
+rgw: bucket stats report mtime in UTC ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27617 
+
+[ #27764 2019-04-25 ]
+qa/suites/upgrade: use correct branch names ==> +9 -9 
+ https://github.com/ceph/ceph/pull/27764 
+
+[ #27781 2019-04-25 ]
+rgw: admin: handle delete_at attr in object stat output ==> +2 -0 
+ https://github.com/ceph/ceph/pull/27781 
+
+[ #27778 2019-04-25 ]
+nautilus: tools: pin the version of breathe that works with Python2 ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27778 
+
+[ #27741 2019-04-25 ]
+doc/dev/corpus.rst: correct instructions ==> +3 -2 
+ https://github.com/ceph/ceph/pull/27741 
+
+[ #27626 2019-04-25 ]
+mgr/dashboard: Do not default to 'admin' as Admin Resource ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27626 
+
+[ #27750 2019-04-24 ]
+test/objectstore: silence -Wsign-compare warning ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27750 
+
+[ #27721 2019-04-24 ]
+tools: pin the version of breathe that works with Python2 ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27721 
+
+[ #27709 2019-04-24 ]
+nautilus: mgr/telemetry: use list; redact host; 24h default interval ==> +7 -5 
+ https://github.com/ceph/ceph/pull/27709 
+
+[ #25692 2019-04-24 ]
+ rgw: returns LimitExceeded when user creates too many ACLs ==> +3 -1 
+ https://github.com/ceph/ceph/pull/25692 
+
+[ #17591 2019-04-24 ]
+rgw: list_bucket versions return NextVersionIdMarker = "null" if next_marker.instance is empty ==> +4 -1 
+ https://github.com/ceph/ceph/pull/17591 
+
+[ #27573 2019-04-24 ]
+import-generated.sh: use PATH to get ceph-dencoder ==> +5 -5 
+ https://github.com/ceph/ceph/pull/27573 
+
+[ #27683 2019-04-24 ]
+qa/workunits/rbd: use more recent qemu-iotests that support Bionic ==> +10 -2 
+ https://github.com/ceph/ceph/pull/27683 
+
+[ #27609 2019-04-24 ]
+mgr/dashboard: Fix iSCSI target form warning ==> +8 -8 
+ https://github.com/ceph/ceph/pull/27609 
+
+[ #27720 2019-04-24 ]
+rbd-mirror: clear out bufferlist prior to listing mirror images ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27720 
+
+[ #27702 2019-04-23 ]
+osd/PG: fix last_complete re-calculation on splitting ==> +5 -4 
+ https://github.com/ceph/ceph/pull/27702 
+
+[ #27707 2019-04-23 ]
+common/util: handle long lines in /proc/cpuinfo ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27707 
+
+[ #27691 2019-04-23 ]
+os/bluestore: fix out-of-bound access in bmap allocator ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27691 
+
+[ #27537 2019-04-23 ]
+mds: better output of 'ceph health detail' when some client is failing to advance oldest client/flush tid ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27537 
+
+[ #27511 2019-04-23 ]
+mds: fix SnapRealm::resolve_snapname for long name ==> +2 -5 
+ https://github.com/ceph/ceph/pull/27511 
+
+[ #27725 2019-04-23 ]
+rgw: sync counters: drop spaces from counter names ==> +5 -5 
+ https://github.com/ceph/ceph/pull/27725 
+
+[ #26829 2019-04-23 ]
+mimic: doc: updated reference link for log based PG ==> +3 -4 
+ https://github.com/ceph/ceph/pull/26829 
+
+[ #27703 2019-04-23 ]
+rbd_replay: call the member decode() explicitly ==> +4 -4 
+ https://github.com/ceph/ceph/pull/27703 
+
+[ #27713 2019-04-23 ]
+doc/rbd/rbd-cloudstack: update disk offering URL to new docs ==> +3 -3 
+ https://github.com/ceph/ceph/pull/27713 
+
+[ #27701 2019-04-22 ]
+nautilus: mgr/telemetry: add report_timestamp to sent reports ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27701 
+
+[ #27708 2019-04-22 ]
+doc/governance: add cbodey ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27708 
+
+[ #27693 2019-04-22 ]
+mgr/telemetry: exclude hostname field in crash reports ==> +5 -3 
+ https://github.com/ceph/ceph/pull/27693 
+
+[ #27288 2019-04-22 ]
+osd/PG: discover missing objects when an OSD peers and PG is degraded ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27288 
+
+[ #27571 2019-04-22 ]
+mgr/telemetry: add report_timestamp to sent reports ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27571 
+
+[ #27622 2019-04-22 ]
+mon: fix INCOMPAT_OCTOPUS feature number ==> +9 -8 
+ https://github.com/ceph/ceph/pull/27622 
+
+[ #27572 2019-04-22 ]
+denc: fix build error by calling global snprintf ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27572 
+
+[ #27577 2019-04-21 ]
+qa/suites/rbd: add random distro selection to librbd tests ==> +3 -2 
+ https://github.com/ceph/ceph/pull/27577 
+
+[ #27663 2019-04-20 ]
+osd/OSDMap: Replace get_out_osds with get_out_existing_osds ==> +4 -4 
+ https://github.com/ceph/ceph/pull/27663 
+
+[ #27651 2019-04-20 ]
+test/osd/safe-to-destroy.sh: fix typo ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27651 
+
+[ #27631 2019-04-20 ]
+mgr/telemetry: change crash dict to a list ==> +3 -3 
+ https://github.com/ceph/ceph/pull/27631 
+
+[ #27509 2019-04-20 ]
+osd/PG: the warning seems more serious than what it wanna transmit ==> +7 -4 
+ https://github.com/ceph/ceph/pull/27509 
+
+[ #27592 2019-04-20 ]
+message,mgr: drop MessageFactory and friends and use ref_t<> in mgr ==> +7 -4 
+ https://github.com/ceph/ceph/pull/27592 
+
+[ #27633 2019-04-20 ]
+osd/osd_types: pool_stat_t::dump - fix 'num_store_stats' field ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27633 
+
+[ #27658 2019-04-20 ]
+msg: output peer address when detecting bad CRCs ==> +6 -3 
+ https://github.com/ceph/ceph/pull/27658 
+
+[ #27606 2019-04-19 ]
+mimic: os/bluestore: fix improper backport for p2 macros for bmap allocator ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27606 
+
+[ #27686 2019-04-18 ]
+osd: Increase log level of messages which unnecessarily fill up logs ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27686 
+
+[ #27576 2019-04-18 ]
+rgw: RGWPeriodPusher uses zone system key for inter-zonegroup messages ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27576 
+
+[ #27567 2019-04-18 ]
+rgw: multisite log trimming only checks peers that sync from us ==> +5 -7 
+ https://github.com/ceph/ceph/pull/27567 
+
+[ #27228 2019-04-17 ]
+mimic: ceph-disk/tests: use random unused port for CEPH_MON ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27228 
+
+[ #27601 2019-04-17 ]
+nautilus: cmake/FindRocksDB: fix IMPORTED_LOCATION for ROCKSDB_LIBRARIES ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27601 
+
+[ #27582 2019-04-17 ]
+nautilus: mon: make mon_osd_down_out_subtree_limit update at runtime ==> +8 -5 
+ https://github.com/ceph/ceph/pull/27582 
+
+[ #27610 2019-04-17 ]
+nautilus: ceph-objectstore-tool: rename dump-import to dump-export ==> +8 -5 
+ https://github.com/ceph/ceph/pull/27610 
+
+[ #27502 2019-04-17 ]
+nautilus: doc/releases/nautilus: fix config update step ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27502 
+
+[ #27593 2019-04-17 ]
+cmake: revert librados_tp.so version from 3 to 2 ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27593 
+
+[ #27624 2019-04-16 ]
+doc: fixed telemetry module reference link ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27624 
+
+[ #27497 2019-04-16 ]
+nautilus: fs: we lack a feature bit for nautilus ==> +5 -1 
+ https://github.com/ceph/ceph/pull/27497 
+
+[ #27597 2019-04-16 ]
+nautilus: cmake: revert librados_tp.so version from 3 to 2 ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27597 
+
+[ #27616 2019-04-16 ]
+qa/tests: moved some runs from ovh, removed ceph-disk/nautilus ==> +5 -6 
+ https://github.com/ceph/ceph/pull/27616 
+
+[ #27552 2019-04-16 ]
+doc/corpus: update to adapt the change from autotools to cmake ==> +7 -6 
+ https://github.com/ceph/ceph/pull/27552 
+
+[ #27531 2019-04-15 ]
+nautilus: ls -S command produces AttributeError: 'str' object has no attribute 'decode' ==> +3 -3 
+ https://github.com/ceph/ceph/pull/27531 
+
+[ #27550 2019-04-15 ]
+nautilus: tests: osd-markdown.sh can fail with CLI_DUP_COMMAND=1 ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27550 
+
+[ #27561 2019-04-15 ]
+nautilus: rgw: don't recalculate etags for slo/dlo ==> +0 -6 
+ https://github.com/ceph/ceph/pull/27561 
+
+[ #27562 2019-04-15 ]
+nautilus - qa/tests: removed some config settings ==> +2 -4 
+ https://github.com/ceph/ceph/pull/27562 
+
+[ #27578 2019-04-15 ]
+rgw: silence a -Wunused-function warning in pubsub ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27578 
+
+[ #27491 2019-04-15 ]
+mgr/rook: Added missing `rgw` daemons in `service ls` ==> +3 -0 
+ https://github.com/ceph/ceph/pull/27491 
+
+[ #27462 2019-04-15 ]
+mgr/rook: Fix RGW creation ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27462 
+
+[ #27517 2019-04-15 ]
+mon: make mon_osd_down_out_subtree_limit update at runtime ==> +8 -5 
+ https://github.com/ceph/ceph/pull/27517 
+
+[ #27485 2019-04-14 ]
+mgr/ActivePyModules: handle_command - fix broken lock ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27485 
+
+[ #27458 2019-04-14 ]
+os/bluestore: fix for FreeBSD iocb structure ==> +5 -1 
+ https://github.com/ceph/ceph/pull/27458 
+
+[ #27513 2019-04-13 ]
+librbd: silence -Wunused-variable warnings ==> +6 -1 
+ https://github.com/ceph/ceph/pull/27513 
+
+[ #27284 2019-04-12 ]
+mimic: osd/PGLog.h: print olog_can_rollback_to before deciding to rollback ==> +5 -0 
+ https://github.com/ceph/ceph/pull/27284 
+
+[ #27475 2019-04-12 ]
+nautilus: librbd: trash move return EBUSY instead of EINVAL for migrating image ==> +5 -5 
+ https://github.com/ceph/ceph/pull/27475 
+
+[ #27478 2019-04-12 ]
+nautilus: osd: process_copy_chunk remove obc ref before pg unlock ==> +4 -2 
+ https://github.com/ceph/ceph/pull/27478 
+
+[ #27470 2019-04-12 ]
+rgw: don't recalculate etags for slo/dlo ==> +0 -6 
+ https://github.com/ceph/ceph/pull/27470 
+
+[ #27528 2019-04-12 ]
+qa/rgw: disable debuginfo packages ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27528 
+
+[ #27549 2019-04-12 ]
+nautilus: doc: rgw: Added library/package for Golang ==> +2 -0 
+ https://github.com/ceph/ceph/pull/27549 
+
+[ #27544 2019-04-12 ]
+nautilus: install-deps.sh: install '*rpm-macros' ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27544 
+
+[ #27477 2019-04-12 ]
+os/bluestore: check return value of func _open_db_and_around. ==> +3 -2 
+ https://github.com/ceph/ceph/pull/27477 
+
+[ #27516 2019-04-12 ]
+mgr/rook: Fix Python 2 regression ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27516 
+
+[ #27499 2019-04-12 ]
+qa/standalone/osd/osd-markdown: fix dup command disabling ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27499 
+
+[ #27535 2019-04-12 ]
+qa/tests: added rados on master, reduced fs, rbd, multimds ==> +7 -9 
+ https://github.com/ceph/ceph/pull/27535 
+
+[ #27524 2019-04-12 ]
+install-deps.sh: install '*rpm-macros' ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27524 
+
+[ #27454 2019-04-11 ]
+nautilus: mgr/DaemonServer: handle_conf_change - fix broken locking ==> +6 -9 
+ https://github.com/ceph/ceph/pull/27454 
+
+[ #27461 2019-04-11 ]
+ nautilus: mgr/dashboard: Error on iSCSI target submission ==> +8 -9 
+ https://github.com/ceph/ceph/pull/27461 
+
+[ #27486 2019-04-11 ]
+nautilus: Rook: Fix creation of Bluestore OSDs ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27486 
+
+[ #27527 2019-04-11 ]
+qa/tests: run luminous-x and mimic-x 2 times a week but with high priority ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27527 
+
+[ #27443 2019-04-11 ]
+cmake: Fix build against ncurses with separate libtinfo ==> +4 -1 
+ https://github.com/ceph/ceph/pull/27443 
+
+[ #27345 2019-04-11 ]
+cephfs-shell: Remove 'str' object references to attribute 'decode' ==> +3 -5 
+ https://github.com/ceph/ceph/pull/27345 
+
+[ #27504 2019-04-11 ]
+qa/tasks/ceph_deploy: install python3.6 instead of python3.4 for py3 tests ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27504 
+
+[ #27329 2019-04-11 ]
+nautilus: rgw: don't crash on missing /etc/mime.types ==> +2 -4 
+ https://github.com/ceph/ceph/pull/27329 
+
+[ #27331 2019-04-11 ]
+nautilus: rgw: Fix S3 compatibility bug when CORS is not found ==> +2 -4 
+ https://github.com/ceph/ceph/pull/27331 
+
+[ #27306 2019-04-11 ]
+nautilus: rgw: fix read not exists null version return wrong ==> +4 -0 
+ https://github.com/ceph/ceph/pull/27306 
+
+[ #27390 2019-04-11 ]
+nautilus: mgr/devicehealth: Fix python 3 incompatiblity ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27390 
+
+[ #27445 2019-04-11 ]
+os/ceph-bluestore-tool: bluefs-bdev-expand asserts if no WAL ==> +6 -1 
+ https://github.com/ceph/ceph/pull/27445 
+
+[ #27495 2019-04-10 ]
+doc/releases/nautilus: fix config update step ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27495 
+
+[ #27402 2019-04-10 ]
+nautilus: osd: OSDMapRef access by multiple threads is unsafe ==> +6 -3 
+ https://github.com/ceph/ceph/pull/27402 
+
+[ #27487 2019-04-10 ]
+nautilus: doc/orchestrator: Fix broken bullet points ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27487 
+
+[ #27490 2019-04-10 ]
+PendingReleaseNotes: note on python3.6 changes ==> +5 -0 
+ https://github.com/ceph/ceph/pull/27490 
+
+[ #27406 2019-04-10 ]
+mgr/dashboard: Add whitelist to guard ==> +7 -0 
+ https://github.com/ceph/ceph/pull/27406 
+
+[ #27289 2019-04-10 ]
+mgr/rook: Fix creation of bluestore OSDs ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27289 
+
+[ #27460 2019-04-09 ]
+nautilus: mgr/dashboard: Error on iSCSI disk diff ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27460 
+
+[ #27464 2019-04-09 ]
+msg/async/frames_v2.h: fix warning ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27464 
+
+[ #27466 2019-04-09 ]
+build/rgw: unittest_rgw_dmclock_scheduler does not need Boost_LIBRARIES ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27466 
+
+[ #27468 2019-04-09 ]
+rpm: add "Provides: python3-*" for python packages and cleanup ==> +5 -5 
+ https://github.com/ceph/ceph/pull/27468 
+
+[ #27125 2019-04-09 ]
+nautilus: build/ops: ceph-mgr-diskprediction-local requires numpy and scipy on SUSE, but these packages do not exist on SUSE ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27125 
+
+[ #27208 2019-04-09 ]
+nautilus: rgw: nfs: skip empty (non-POSIX) path segments ==> +7 -1 
+ https://github.com/ceph/ceph/pull/27208 
+
+[ #27232 2019-04-09 ]
+nautilus: rgw: nfs: svc-enable RGWLib ==> +8 -1 
+ https://github.com/ceph/ceph/pull/27232 
+
+[ #27239 2019-04-09 ]
+nautilus: tests: krbd discard qa fixes ==> +6 -8 
+ https://github.com/ceph/ceph/pull/27239 
+
+[ #27127 2019-04-09 ]
+nautilus: build/ops: Running ceph under Pacemaker control not supported by SUSE Linux Enterprise ==> +3 -1 
+ https://github.com/ceph/ceph/pull/27127 
+
+[ #27455 2019-04-09 ]
+test: Add includefile for arrays ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27455 
+
+[ #27431 2019-04-09 ]
+doc/mgr/orchestrator_cli: Rook orch supports mon update ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27431 
+
+[ #27194 2019-04-09 ]
+librbd: do not allow to deep copy migrating image ==> +6 -0 
+ https://github.com/ceph/ceph/pull/27194 
+
+[ #27286 2019-04-09 ]
+ osdc/Objecter: always add `\0' after strncpy() ==> +8 -7 
+ https://github.com/ceph/ceph/pull/27286 
+
+[ #27422 2019-04-09 ]
+doc: fix parameter to set pg autoscale mode ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27422 
+
+[ #27427 2019-04-09 ]
+cephfs-shell: Use colorama module instead of colorize ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27427 
+
+[ #27256 2019-04-08 ]
+mds/server:mds: drop reconnect message from non-existent session ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27256 
+
+[ #27214 2019-04-08 ]
+mds: check directory split after rename ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27214 
+
+[ #27414 2019-04-08 ]
+msg/async: resolve gcc warning ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27414 
+
+[ #27281 2019-04-08 ]
+script/ceph-release-notes: alternate merge commit format ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27281 
+
+[ #27437 2019-04-08 ]
+vstart: add an alias for cephfs-shell to vstart_environment.sh ==> +5 -0 
+ https://github.com/ceph/ceph/pull/27437 
+
+[ #27349 2019-04-08 ]
+qa/distros: centos 7.6; update centos and ubuntu latest symlinks ==> +4 -2 
+ https://github.com/ceph/ceph/pull/27349 
+
+[ #27352 2019-04-08 ]
+common: start logging for non-global_init users ==> +8 -2 
+ https://github.com/ceph/ceph/pull/27352 
+
+[ #27417 2019-04-08 ]
+rpm: use python 3.6 as the default python3 ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27417 
+
+[ #27407 2019-04-06 ]
+rpm: use python3.4 on RHEL7 by default ==> +8 -2 
+ https://github.com/ceph/ceph/pull/27407 
+
+[ #27403 2019-04-05 ]
+doc: update documentation for the MANY_OBJECTS_PER_PG warning ==> +3 -3 
+ https://github.com/ceph/ceph/pull/27403 
+
+[ #24639 2019-04-05 ]
+mimic: mgr: crashdump feature backport ==> +3 -3 
+ https://github.com/ceph/ceph/pull/24639 
+
+[ #26497 2019-04-05 ]
+mimic: mgr/balancer: blame if upmap won't actually work ==> +9 -0 
+ https://github.com/ceph/ceph/pull/26497 
+
+[ #27409 2019-04-05 ]
+vstart: only add --debug-ms=1 in RGWDEBUG ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27409 
+
+[ #27128 2019-04-05 ]
+nautilus: ceph-mgr:  ImportError: Interpreter change detected - this module can only be loaded into one interprer per process. ==> +4 -1 
+ https://github.com/ceph/ceph/pull/27128 
+
+[ #27227 2019-04-05 ]
+nautilus: mgr/balancer: Python 3 compatibility fix ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27227 
+
+[ #27302 2019-04-05 ]
+nautilus: osd/PGLog.h: print olog_can_rollback_to before deciding to rollback ==> +5 -0 
+ https://github.com/ceph/ceph/pull/27302 
+
+[ #27397 2019-04-05 ]
+doc: fixed caps ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27397 
+
+[ #27396 2019-04-05 ]
+doc: fixed typo in leadership names ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27396 
+
+[ #27361 2019-04-05 ]
+nautilus: mgr/dashboard: Fix env vars of `run-tox.sh`  ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27361 
+
+[ #27368 2019-04-05 ]
+nautilus: dashboard: NFS: failed to disable NFSv3 in export create ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27368 
+
+[ #27371 2019-04-05 ]
+nautilus: mgr/dashboard: NFS Squash field should be required ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27371 
+
+[ #27372 2019-04-05 ]
+nautilus: mgr/dashboard: Error creating NFS export without UDP ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27372 
+
+[ #26874 2019-04-05 ]
+osd: OSDMapRef access by multiple threads is unsafe ==> +6 -3 
+ https://github.com/ceph/ceph/pull/26874 
+
+[ #27121 2019-04-05 ]
+doc/orchestrator: Fix broken bullet points ==> +1 -0 
+ https://github.com/ceph/ceph/pull/27121 
+
+[ #27379 2019-04-05 ]
+doc : fixed capitalization ==> +3 -3 
+ https://github.com/ceph/ceph/pull/27379 
+
+[ #27383 2019-04-05 ]
+cmake: should check for PYTHON3_VERSION_STRING ==> +4 -10 
+ https://github.com/ceph/ceph/pull/27383 
+
+[ #27266 2019-04-04 ]
+cephfs-shell: Fix hidden files and directories list by ls command ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27266 
+
+[ #27380 2019-04-04 ]
+mgr/dashboard: Fix iSCSI target submission ==> +8 -9 
+ https://github.com/ceph/ceph/pull/27380 
+
+[ #27373 2019-04-04 ]
+doc: Add usage for shortcuts command in cephfs-shell ==> +4 -0 
+ https://github.com/ceph/ceph/pull/27373 
+
+[ #27238 2019-04-04 ]
+mds: update projected_version when upgrading snaptable ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27238 
+
+[ #27382 2019-04-04 ]
+nautilus: rpm,cmake: use specified python3 version if any ==> +7 -4 
+ https://github.com/ceph/ceph/pull/27382 
+
+[ #27358 2019-04-04 ]
+rpm,cmake: use specified python3 version if any  ==> +7 -4 
+ https://github.com/ceph/ceph/pull/27358 
+
+[ #27362 2019-04-04 ]
+doc/rados/configuration: fix typo in mon-lookup-dns ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27362 
+
+[ #27338 2019-04-04 ]
+crimson/osd: lower debug level on i/o path ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27338 
+
+[ #27378 2019-04-04 ]
+mgr/dashboard: Fix iSCSI disk diff calculation ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27378 
+
+[ #27350 2019-04-04 ]
+mgr/dashboard: Fix deletion of NFS transports properties ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27350 
+
+[ #27326 2019-04-04 ]
+test/librados_test_stub: ensure the log flusher thread is started ==> +3 -0 
+ https://github.com/ceph/ceph/pull/27326 
+
+[ #27141 2019-04-03 ]
+mon,osd: various octopus feature bits ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27141 
+
+[ #27351 2019-04-03 ]
+mimic: mon/OSDMonitor: fix osd boot check ==> +3 -3 
+ https://github.com/ceph/ceph/pull/27351 
+
+[ #26475 2019-04-03 ]
+luminous: tests: run-standalone.sh set local library location so mgr can find li… ==> +2 -0 
+ https://github.com/ceph/ceph/pull/26475 
+
+[ #27039 2019-04-03 ]
+mimic: librbd: avoid aggregate-initializing IsWriteOpVisitor ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27039 
+
+[ #27041 2019-04-03 ]
+mimic: librbd: avoid aggregate-initializing any static_visitor ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27041 
+
+[ #26529 2019-04-03 ]
+mimic: rgw: check for non-existent bucket in RGWGetACLs ==> +3 -0 
+ https://github.com/ceph/ceph/pull/26529 
+
+[ #26641 2019-04-03 ]
+mimic: rgw: only update last_trim marker on ENODATA ==> +3 -1 
+ https://github.com/ceph/ceph/pull/26641 
+
+[ #27029 2019-04-03 ]
+mimic: rgw: sync module: avoid printing attrs of objects in log ==> +5 -4 
+ https://github.com/ceph/ceph/pull/27029 
+
+[ #27174 2019-04-03 ]
+mimic: rgw: ldap: fix LDAPAuthEngine::init() when uri !empty() ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27174 
+
+[ #27179 2019-04-03 ]
+mimic: rgw: nfs: skip empty (non-POSIX) path segments ==> +7 -1 
+ https://github.com/ceph/ceph/pull/27179 
+
+[ #27314 2019-04-03 ]
+nautilus: mon: quiet devname log noise ==> +0 -1 
+ https://github.com/ceph/ceph/pull/27314 
+
+[ #27280 2019-04-03 ]
+mgr: more GIL fixes ==> +4 -3 
+ https://github.com/ceph/ceph/pull/27280 
+
+[ #27333 2019-04-03 ]
+rpm: enable devtoolset-8 on aarch64 also ==> +1 -5 
+ https://github.com/ceph/ceph/pull/27333 
+
+[ #27328 2019-04-03 ]
+qa/tests: reduce number of jobs for `kcephfs` ==> +6 -1 
+ https://github.com/ceph/ceph/pull/27328 
+
+[ #26064 2019-04-02 ]
+luminous: core: Objecter::calc_op_budget: Fix invalid access to extent union member ==> +4 -4 
+ https://github.com/ceph/ceph/pull/26064 
+
+[ #27173 2019-04-02 ]
+luminous: rgw: ldap: fix LDAPAuthEngine::init() when uri !empty() ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27173 
+
+[ #27180 2019-04-02 ]
+luminous: rgw: nfs: skip empty (non-POSIX) path segments ==> +7 -1 
+ https://github.com/ceph/ceph/pull/27180 
+
+[ #27261 2019-04-02 ]
+nautilus: mgr: Configure Py root logger for Mgr modules ==> +7 -1 
+ https://github.com/ceph/ceph/pull/27261 
+
+[ #27313 2019-04-02 ]
+mon: quiet devname noise ==> +0 -1 
+ https://github.com/ceph/ceph/pull/27313 
+
+[ #27308 2019-04-02 ]
+init-ceph: wait longer before resending $signal ==> +1 -1 
+ https://github.com/ceph/ceph/pull/27308 
+
+[ #27301 2019-04-02 ]
+qa: remove requirement on simple msgr ==> +0 -3 
+ https://github.com/ceph/ceph/pull/27301 
+
+[ #26970 2019-04-01 ]
+mds: initialize cap_revoke_eviction_timeout with conf ==> +1 -0 
+ https://github.com/ceph/ceph/pull/26970 
+
+[ #26992 2019-04-01 ]
+mount.ceph.c: do not pass nofail to the kernel ==> +2 -0 
+ https://github.com/ceph/ceph/pull/26992 
+
+[ #27087 2019-04-01 ]
+mds: remove duplicated check on balance amount ==> +0 -1 
+ https://github.com/ceph/ceph/pull/27087 
+
+[ #27063 2019-04-01 ]
+mds: there is an assertion when calling Beacon::shutdown() ==> +2 -1 
+ https://github.com/ceph/ceph/pull/27063 
+
+[ #26616 2019-04-01 ]
+luminous: qa/standalone/osd/osd-markdown: disable CLI command dups ==> +4 -1 
+ https://github.com/ceph/ceph/pull/26616 
+
+[ #27294 2019-04-01 ]
+mgr/dashboard: Fix NFS squash default value ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27294 
+
+[ #27246 2019-04-01 ]
+nautilus: ERROR: test_disable (tasks.mgr.dashboard.test_mgr_module.MgrModuleTelemetryTest) ==> +5 -1 
+ https://github.com/ceph/ceph/pull/27246 
+
+[ #27260 2019-04-01 ]
+nautilus: mgr/dashboard: fix sparkline component ==> +0 -1 
+ https://github.com/ceph/ceph/pull/27260 
+
+[ #27244 2019-04-01 ]
+mgr/dashboard: Fix deletion of NFS protocol properties ==> +2 -2 
+ https://github.com/ceph/ceph/pull/27244 
+
+[ #27253 2019-04-01 ]
+qa/tests added mimic-x-singleton suite to rados as symlink ==> +7 -6 
+ https://github.com/ceph/ceph/pull/27253 
+
+[ #26642 2019-04-01 ]
+luminous: MDSMonitor: do not assign standby-replay when degraded ==> +3 -2 
+ https://github.com/ceph/ceph/pull/26642 
+
+[ #26776 2019-04-01 ]
+luminous : qa: bump fsstress timeout to 6h ==> +1 -0 
+ https://github.com/ceph/ceph/pull/26776 
+
+[ #26805 2019-04-01 ]
+luminous: qa: unmount clients before deleting fs ==> +3 -0 
+ https://github.com/ceph/ceph/pull/26805 
+
+[ #26820 2019-04-01 ]
+luminous: qa: Loading libcephfs-jni: Failure! ==> +3 -0 
+ https://github.com/ceph/ceph/pull/26820 
+
+[ #26964 2019-04-01 ]
+luminous: qa: extend MDS heartbeat grace for valgrind ==> +5 -6 
+ https://github.com/ceph/ceph/pull/26964 
+
+[ #27206 2019-04-01 ]
+osd: shutdown recovery_request_timer earlier ==> +5 -5 
+ https://github.com/ceph/ceph/pull/27206 
+
