@@ -1,7 +1,0 @@
-Weird, no diff_stat ?
-[ #27357 2019-04-09 ]
-librbd: fixed several race conditions related to copyup 
- https://github.com/ceph/ceph/pull/27357 
-
-
-

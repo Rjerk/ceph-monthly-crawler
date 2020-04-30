@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 
 import xlsxwriter
 
-wb = xlsxwriter.Workbook("ceph-monthly.xlsx")
+wb = xlsxwriter.Workbook("ceph-monthly-{}-{}.xlsx".format(datetime.datetime.now().year, datetime.datetime.now().month))
 ws = wb.add_worksheet(datetime.datetime.now().strftime("%B"))
 row = 0
 
@@ -23,15 +23,19 @@ def get_html(url):
     try:
         driver.get(url)
     except:
-        print ("Have a problem when get: {}".format(url), file=weird)
-    time.sleep(2)
+        print ("Have a problem when get: {}".format(url))
+        return ""
+    time.sleep(5)
     return driver.page_source
 
 def this_month(month):
     return month == datetime.datetime.now().month
 
 def get_soup(uri):
-    return BeautifulSoup(get_html(uri), 'html.parser')
+    source = get_html(uri)
+    if not source:
+        return None
+    return BeautifulSoup(source, 'html.parser')
 
 def write_file(row, pr_id, pr_title, pr_link, pr_merged_time, incre, decre):
     ws.write(row, 0, pr_id)
@@ -41,13 +45,14 @@ def write_file(row, pr_id, pr_title, pr_link, pr_merged_time, incre, decre):
     ws.write(row, 4, incre)
     ws.write(row, 5, decre)
 
-for li in get_soup('https://github.com/ceph/ceph/pulse/monthly').find_all('li'):
+# for li in get_soup('https://github.com/ceph/ceph/pulse/monthly').find_all('li'):
+for li in BeautifulSoup(get_html('https://github.com/ceph/ceph/pulse/monthly'), 'html.parser').find_all('li'):
     if li.span and li.span.string and 'Merged' in li.span.string:
         pr_merged_time = datetime.datetime.strptime(
                             li.find('relative-time').get('datetime'),
                             '%Y-%m-%dT%H:%M:%SZ'
                          )
-
+        print (pr_merged_time)
         if this_month(pr_merged_time.month):
 
             pr_id    =  (li.find_all('span', 'num')[0].string)[1:]
@@ -56,10 +61,14 @@ for li in get_soup('https://github.com/ceph/ceph/pulse/monthly').find_all('li'):
 
             print ("{} {} {} {} {}".format(pr_id, pr_title, pr_link, pr_merged_time.date(), pr_merged_time.month))
 
-            diff_stat = get_soup(pr_link).find(id='diffstat')
-
+            soup = get_soup(pr_link)
+            if not soup:
+                print(row, pr_id, pr_title, pr_link, pr_merged_time.date(), None, None)
+                row += 1
+                continue
+            diff_stat = soup.find(id='diffstat')
             if not diff_stat:
-                write_weird(row, pr_id, pr_title, pr_link, pr_merged_time.date(), None, None)
+                write_file(row, pr_id, pr_title, pr_link, pr_merged_time.date(), None, None)
                 row += 1
                 continue
 
