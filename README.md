@@ -1,5 +1,7 @@
 # ceph-monthly-crawler
 
+Mac 使用:
+
 ```
 pip3 install beautifulsoup4 selenium xlsxwriter
 npm install chromedriver -g
@@ -11,5 +13,6 @@ unzip chromedriver_mac64.zip
 
 sudo mv ~/Downloads/chromedriver /usr/bin
 
+# 修改脚本里的 MONTH，然后运行
 ./crawl.py
 ```

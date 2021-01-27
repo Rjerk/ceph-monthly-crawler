@@ -10,7 +10,9 @@ from selenium.webdriver.chrome.options import Options
 
 import xlsxwriter
 
-wb = xlsxwriter.Workbook("ceph-monthly-{}-{}.xlsx".format(datetime.datetime.now().year, datetime.datetime.now().month))
+MONTH = 12
+
+wb = xlsxwriter.Workbook("ceph-monthly-{}-{}.xlsx".format(datetime.datetime.now().year, MONTH))
 ws = wb.add_worksheet(datetime.datetime.now().strftime("%B"))
 row = 0
 
@@ -29,7 +31,8 @@ def get_html(url):
     return driver.page_source
 
 def this_month(month):
-    return month == datetime.datetime.now().month
+    return month == MONTH
+    # return month == datetime.datetime.now().month
 
 def get_soup(uri):
     source = get_html(uri)
@@ -47,7 +50,7 @@ def write_file(row, pr_id, pr_title, pr_link, pr_merged_time, incre, decre):
 
 # for li in get_soup('https://github.com/ceph/ceph/pulse/monthly').find_all('li'):
 for li in BeautifulSoup(get_html('https://github.com/ceph/ceph/pulse/monthly'), 'html.parser').find_all('li'):
-    if li.span and li.span.string and 'Merged' in li.span.string:
+    if li.p and 'merged' in li.p.text:
         pr_merged_time = datetime.datetime.strptime(
                             li.find('relative-time').get('datetime'),
                             '%Y-%m-%dT%H:%M:%SZ'
